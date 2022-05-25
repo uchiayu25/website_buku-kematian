@@ -16,10 +16,10 @@
     </div> -->
     <div class="wrapper">
         <div class="logo">
-            <img src="image\Disdukcapil Kabupaten Badung.png.png" alt="">
+            <img src="image\Disdukcapil Kabupaten Badung.png" alt="">
         </div>
         <div class="text-center mt-4 name">
-           Disdukcapil Kabupaten Badung
+           Pelaporan Buku Pokok Pemakaman
         </div>
         <form class="p-3 mt-3">
             <div class="form-field d-flex align-items-center">
