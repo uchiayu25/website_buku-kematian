@@ -16,7 +16,7 @@
     </div> -->
     <div class="wrapper">
         <div class="logo">
-            <img src="image\Badung.png" alt="">
+            <img src="image\Disdukcapil Kabupaten Badung.png.png" alt="">
         </div>
         <div class="text-center mt-4 name">
            Disdukcapil Kabupaten Badung
