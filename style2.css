@@ -1,0 +1,92 @@
+/* Importing fonts from Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+body{
+    background: #E0EDFE !important;
+}
+
+.loc{
+    background-color: #0E4085;
+    color: white ;
+    padding: 20px; 
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container_menu {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+}
+
+h2{
+    text-align: center;
+}
+.border{
+    width: 25%;
+    border-radius: 10%;
+    background-color: white;
+}
+
+.count_total {
+    margin-top: 45px;
+    text-align: center;
+  }
+  
+.count_total h2 {
+    text-transform: uppercase;
+  }
+  
+.count_total h4 {
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+
+.count {
+    display: flex;
+    justify-content: center;
+  }
+  
+.count_box .about-detail {
+    padding: 2px 25px 35px 25px;
+  }
+  
+.count_img-container {
+    width: 120px;
+    background-color: #0E4085;
+    height: 120px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 20px solid #d7daf4;
+    margin: 0 auto 20px auto;
+  }
+  
+.count_box .count_img-box {
+    width: 75px;
+  }
+  
+.count .count-detail p {
+    margin-top: 15px;
+  }
+  
+.count img {
+    width: 100%;
+}
+
+@media (max-width: 992px) {
+    .count_box-container {
+        flex-wrap: wrap;
+    }
+}
