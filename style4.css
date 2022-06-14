@@ -1,0 +1,44 @@
+/* Importing fonts from Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+body{
+    background: #E0EDFE !important;
+}
+
+.input-group-append {
+    cursor: pointer;
+  }
+ 
+.container{
+    background: white ;
+    border-radius: 20px;
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 3px 3px 3px #b1b1b1,
+        -3px -3px 3px #fff;
+    letter-spacing: 1.3px;
+}
+
+.btn{
+    width: 150px;
+}
+
+.logo img{
+    width: 600px;
+}
+
+
+.container_footer{
+  background: black;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  color: white;
+}
+@media (max-width: 992px) {
+    .count_box-container {
+        flex-wrap: wrap;
+    }
+}
