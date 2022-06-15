@@ -33,7 +33,7 @@
                     <a class="nav-link" href="#">Laporan</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Formulir <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#">Formulir<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="Login.php">Log Out</a>
@@ -47,8 +47,14 @@
     </header>
 
     <!-- Formulir -->
-    <section class="formulir" style="margin-top: 10em;">
+    <section class="formulir" style="margin-top: 7em;">
         <form class="container">
+            <div class="form-group align-right">
+                <div class="input-group date col-md-2" id="datepicker1">
+                    <input type="date" class="form-control" id="date">
+                    <span class="input-group-append"></span>
+                </div>
+            </div>
             <div class="logo text-center">
                 <img src="image\formulir.png" class= "mt-lg-5 " alt="">
             </div>
@@ -85,14 +91,14 @@
                 </div>
                 <div class="form-group col-md-4">
                     <label for="date">Tanggal Meninggal</label>
-                    <div class="input-group date" id="datepicker1">
+                    <div class="input-group date" id="datepicker2">
                         <input type="date" class="form-control" id="date">
                             <span class="input-group-append"></span>
                     </div>
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputState">Tanggal Pemakaman</label>
-                    <div class="input-group date" id="datepicker2">
+                    <div class="input-group date" id="datepicker3">
                         <input type="date" class="form-control" id="date">
                             <span class="input-group-append"></span>
                     </div>
