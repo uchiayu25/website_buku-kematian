@@ -12,30 +12,32 @@ body{
 }
 
 .container {
-    width: 100%;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+    width: 400px;
 }
 
 .container_menu {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding: 0;
     margin-right: auto;
     margin-left: auto;
     margin-top: 10px;
+    justify-content: center;
 }
 
 h2{
     text-align: center;
+
 }
 .border{
-    width: 25%;
-    border-radius: 10%;
+    border-radius: 30px;
     background-color: white;
+    margin-left: 30px;
+    margin-right: 30px;
 }
+
 
 .count_total {
     margin-top: 45px;
@@ -51,13 +53,12 @@ h2{
     font-weight: 600;
   }
 
-
 .count {
     display: flex;
     justify-content: center;
-  }
+}
   
-.count_box .about-detail {
+.count_box .count-detail {
     padding: 2px 25px 35px 25px;
   }
   
@@ -85,6 +86,61 @@ h2{
     width: 100%;
 }
 
+
+.fitur {
+    margin-top: 45px;
+    text-align: center;
+  }
+  
+.fitur h2 {
+    text-transform: uppercase;
+  }
+  
+.fitur h4 {
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+
+.menu {
+    display: flex;
+    justify-content: center;
+}
+  
+.menu_box .menu-detail {
+    padding: 2px 25px 35px 25px;
+  }
+  
+.menu_box .menu_img-box {
+    width: 150px;
+  }
+  
+.menu .menu-detail p {
+    margin-top: 15px;
+  }
+  
+.menu img {
+    width: 100%;
+}
+
+.menu_img-container {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.container_footer{
+  background: black;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  color: white;
+}
 @media (max-width: 992px) {
     .count_box-container {
         flex-wrap: wrap;
