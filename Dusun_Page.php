@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pelaporan Buku Pokok Pemakaman(Dusun)</title>
+    <title>Dusun-Beranda</title>
     <link rel="icon" href="image\Badung.png" type="image/icon type">
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style2.css">
@@ -26,7 +26,7 @@
                     <a class="nav-link" href="#">Beranda <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Laporan</a>
+                    <a class="nav-link" href="Lihat_Laporan.php">Laporan</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="Dusun_Pelaporan.php">Formulir</a>
@@ -49,15 +49,7 @@
 
     <!-- Location -->
     <div class="container-fluid loc">
-        <div class="row row-cols-4">
-            <div class="col">
-                <div class="input-group mb-2">
-                    <span class="input-group-text font-weight-bold" id="basic-addon1" style="background:transparent; border: none; color: white">Kabupaten</span>
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Badung</option>
-                    </select>
-                </div>
-            </div>
+        <div class="row row-cols-3">
             <div class="col">
                 <div class="input-group mb-2">
                     <span class="input-group-text font-weight-bold" id="basic-addon1" style="background:transparent; border: none; color: white">Kecamatan</span>
@@ -104,7 +96,7 @@
             <h2>Akumulasi Kematian</h2>
         </div>  
         <div class="container mt-5">
-            <div class="count">
+            <div class="count d-flex flex-column flex-md-row gap-3 gap-md-0 align-items-center align-items-md-stretch">
                 <span class="border">
                     <div class="count_box mt-2">
                         <div class="count-detail">
@@ -154,8 +146,8 @@
         </div>
 
         <div class="container mt-5">
-            <div class="count">
-                <span class="border">
+            <div class="count d-flex flex-column flex-md-row gap-3 gap-md-0 align-items-center align-items-md-stretch">
+                <span class="border-two">
                     <div class="count_box mt-2">
                         <div class="count-detail">
                             <div class="count_img-container">
@@ -170,7 +162,7 @@
                         </div>
                     </div>
                 </span>
-                <span class="border">
+                <span class="border-two">
                     <div class="count_box mt-2">
                         <div class="count-detail">
                             <div class="count_img-container">
@@ -181,6 +173,9 @@
                             <div class="count_detail-ox">
                                 <h4>Total Kematian Bulanan</h4>
                                 <p>Jumlah Pelaporan Kematian Bulan Ini</p>
+                            </div>
+                            <div>
+                                Tst
                             </div>
                         </div>
                     </div>
@@ -195,9 +190,9 @@
             <h2>Menu</h2>
         </div>
 
-        <div class="container_menu mt-5">
-            <div class="menu">
-                <span class="border">
+        <div class="container_menu mt-5 mb-5">
+            <div class="menu d-flex flex-column flex-md-row gap-3 gap-md-0 align-items-center align-items-md-stretch">
+                <span class="border-three">
                     <div class="menu_box mt-2">
                         <div class="menu-detail">
                             <div class="menu_detail-ox">
@@ -214,7 +209,7 @@
                         </div>
                     </div>
                 </span>
-                <span class="border mr-3">
+                <span class="border-four mr-3">
                     <div class="menu_box mt-2">
                         <div class="menu-detail">
                             <div class="menu_detail-ox">
@@ -237,7 +232,7 @@
 
     <!-- Footer -->
     <footer id="footer">
-        <div class="footer-top mt-lg-5">
+        <div class=" mt-lg-5">
             <div class="container_footer">
                 <div class="row">
                     <div class="col-lg-6 col-md-12 footer-contact mt-3">
@@ -260,7 +255,7 @@
                         </ul>
                     </div> -->
 
-                    <div class="col-lg-6 col-md-12 footer-links mt-3">
+                    <!-- <div class="col-lg-6 col-md-12 footer-links mt-3">
                         <h5>Media Sosial Kami</h5>
                         <p>Temukan kami dalam beberapa media sosial berikut ini.</p>
                         <div class="social-links mt-3">
@@ -270,10 +265,11 @@
                             <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
                             <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
+    </footer>
 
 </body>
 </html>
