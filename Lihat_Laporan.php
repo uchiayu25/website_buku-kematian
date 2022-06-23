@@ -20,14 +20,14 @@
             </a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Beranda</a>
-                </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="Dusun_Page.php">Beranda</a>
+                </li>
+                <li class="nav-item active">
                     <a class="nav-link" href="#">Laporan<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Formulir</a>
+                    <a class="nav-link" href="Dusun_Pelaporan.php">Formulir</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="Login.php">Log Out</a>
@@ -40,12 +40,14 @@
         </nav>
     </header>
 
-    <section class="laporan">
-        <form class="container">
-            <div class="form-row mt-lg-5">
-                <div class="logo">
+    <section class="laporan container">
+        <form class="container-laporan-buku container row">
+        <div class="logo col-5">
                     <img src="image\bukupokok.png" alt="">
-                </div>
+        </div>
+        <div class="col-7 content">
+            <div class="form-row mt-lg-5">
+                
                 <div class="form-group">
                     <label for="dusun">Dusun</label>
                     <input type="text" class="form-control" id="inputdusun" placeholder="Dusun">
@@ -60,26 +62,25 @@
                 </div>
             </div>
 
-            <div class="form-row" style="margin-left: 500px;">
-                <div class="">
-                    <div class="form-group" style="width: 200px;">
-                        <label for="inputState">Akta Kematian</label>
-                        <select id="inputState" class="form-control">
+            <div class="mt-3 content" >
+                    <div class="form-group row ">
+                        <label for="inputState" class="col-3">Akta Kematian</label>
+                        <select id="inputState" class="col-5">
                             <option selected>Pilih</option>
                             <option>Ada</option>
                             <option>Tidak</option>
                         </select>
                     </div>
-                </div>
             </div>
 
-            <div class="form-row mt-lg-3" style="margin-left:500px;">
-                <div class=" d-lg-inline-flex">
+            <div class="form-row mt-lg-3">
+                <div class=" d-lg-inline-flex align-items-center">
                     <label>Rentang</label>
                     <div class="input-group date" id="datepicker1">
                         <input type="date" class="form-control ml-4" id="date">
                         <span class="input-group-append"></span>
                     </div>
+                    <span class="ms-3">sampai</span>
                     <div class="input-group date" id="datepicker1">
                         <input type="date" class="form-control ml-4" id="date">
                         <span class="input-group-append"></span>
@@ -87,7 +88,7 @@
                 </div>
             </div>
 
-            <div class="form-row" style="margin-left:500px;">
+            <div class="form-row">
                 <div class="form-group mt-lg-5" style="width: 500px;">
                     <input type="text" class="form-control" id="inputcari" placeholder="Cari">
                     <span class="input-group-append"></span>
@@ -95,6 +96,7 @@
                 <div class="mt-lg-5">
                     <button type="submit" class="btn btn-outline-primary ml-lg-5 justify-content-end">Export</button>
                 </div>
+            </div>
             </div>
 
             <table class="table mt-3">
