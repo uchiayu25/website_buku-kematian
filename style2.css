@@ -29,8 +29,12 @@ body{
 
 h2{
     text-align: center;
-
 }
+
+.content{
+  justify-content: center;
+}
+
 .border{
     border-radius: 30px;
     background-color: white;
@@ -65,16 +69,25 @@ h2{
     background-color: #425D81;
     margin-left: 30px;
     margin-right: 30px;
-    width: 500px;
     color: white;
+    width: 350px;
 }
 
 .border-four{
   border-radius: 30px;
+  background-color: #0E4085;
+  margin-left: 30px;
+  margin-right: 30px;
+  width: 350px;
+  color: white;
+}
+
+.border-five{
+  border-radius: 30px;
   background-color: #1D62BE;
   margin-left: 30px;
   margin-right: 30px;
-  width: 500px;
+  width: 350px;
   color: white;
 }
 
@@ -147,11 +160,11 @@ h2{
 }
   
 .menu_box .menu-detail {
-    padding: 2px 25px 35px 25px;
+    padding: 2px 10px 10px 10px;
   }
   
 .menu_box .menu_img-box {
-    width: 150px;
+    width: 100%;
   }
   
 .menu .menu-detail p {
@@ -173,6 +186,9 @@ h2{
 
 .tabel{
   background-color: white;
+  padding: 20px;
+  margin-left: 20px ;
+  margin-right: 20px;
 }
 
 .container_footer{
