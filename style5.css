@@ -3,6 +3,11 @@
 body{
     background: #E0EDFE !important;
 }
+
+.container{
+    margin-top: 8em;
+}
+
 .container-laporan-buku{
     margin-top: 7em;
     background: white ;
@@ -36,6 +41,6 @@ body{
       }
   }
 
-  .content {
+.content {
     width: 100%;
   }
