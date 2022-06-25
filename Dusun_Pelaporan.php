@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulir Pelaporan(Dusun)</title>
+    <title>Dusun-Formulir Pelaporan</title>
     <link rel="icon" href="image\Badung.png" type="image/icon type">
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style4.css">
@@ -26,13 +26,13 @@
             </a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Beranda</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="Dusun_Page.php">Beranda</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Laporan</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="#">Formulir<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
@@ -109,20 +109,21 @@
                 </div>
             </div>
             
-            <div class="form-group-row">
-                <div class="col-sm-10">
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input radio-inline" type="radio" id="gridRadio1" value="option1">
-                        <label class="form-check-label" for="gridRadio">Ada</label>
+            <div class="form-group">
+                <label for="inputAkta">Akta Kematian</label><
+                    <div class="col-sm-10">
+                        <div class="form-check">
+                            <label class="form-check-label isi col-1">
+                                <input class="form-check-input radio-inline" type="radio" name="gridRadios" id="gridRadios1" value="option1">
+                                Ada</label>
+                                <label class="form-check-label isi col-1">
+                                <input class="form-check-input radio-inline" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                                Tidak</label>
+                            <div class="form-check form-check-inline col-sm-6">
+                                <input type="text" class="form-control" id="inputAkta" placeholder="Nomer Akta">
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input radio-inline" type="radio" id="gridRadio2" value="option2">
-                        <label class="form-check-label" for="gridRadio">Tidak</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input type="text" class="form-control" id="inputAkta" placeholder="Nomer Akta">
-                    </div>
-                </div>
             </div>
             <div class="form-group">
                 <label for="inputNIKPelapor">NIK Pelapor</label>
@@ -184,6 +185,7 @@
                 </div>
             </div>
         </div>
+    </footer>
     
         <script type="text/javascript">
             $(function(){
