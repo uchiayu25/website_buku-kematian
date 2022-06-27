@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 05, 2022 at 01:22 PM
+-- Generation Time: Jun 27, 2022 at 04:23 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -689,6 +689,40 @@ INSERT INTO `kecamatan` (`kode_kecamatan`, `nama_kecamatan`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `laporan`
+--
+
+CREATE TABLE `laporan` (
+  `id_laporan` int(12) NOT NULL,
+  `date_lapor` date DEFAULT NULL,
+  `kode_dusun` bigint(20) DEFAULT NULL,
+  `kode_desa` bigint(20) DEFAULT NULL,
+  `kode_kecamatan` bigint(20) DEFAULT NULL,
+  `NIK_m` bigint(20) DEFAULT NULL,
+  `nama_m` varchar(100) DEFAULT NULL,
+  `tempat_m` varchar(50) DEFAULT NULL,
+  `tanggal_m` date DEFAULT NULL,
+  `tanggal_p` date DEFAULT NULL,
+  `kode_akta` tinyint(1) DEFAULT NULL,
+  `no_akta` varchar(100) DEFAULT NULL,
+  `NIK_p` bigint(20) DEFAULT NULL,
+  `nama_p` varchar(100) DEFAULT NULL,
+  `hub_p` varchar(100) DEFAULT NULL,
+  `nama_lengkap_kepdusun` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `laporan`
+--
+
+INSERT INTO `laporan` (`id_laporan`, `date_lapor`, `kode_dusun`, `kode_desa`, `kode_kecamatan`, `NIK_m`, `nama_m`, `tempat_m`, `tanggal_m`, `tanggal_p`, `kode_akta`, `no_akta`, `NIK_p`, `nama_p`, `hub_p`, `nama_lengkap_kepdusun`) VALUES
+(17, '2022-06-27', 51030200030002, 5103020003, 5103020, 1908561031190856, 'Ais minah', 'sawah', '2022-06-09', '2022-06-09', 1, '56789182', 987654321098762, 'ytrisnadkjs', 'cucu', 'Pijarcan'),
+(18, '2022-06-27', 51030200030002, 5103020003, 5103020, 1908561031190856, 'yutriksna', 'Rumah Sakit', '2022-06-08', '2022-06-15', 1, '56789182', 987654321098762, 'ytrisnadkjs', 'cucu', 'Pijarcan'),
+(19, '2022-06-27', 51030200030002, 5103020003, 5103020, 1908561031190856, 'Ais minah', 'sawah', '2022-06-16', '2022-06-16', 1, '56789182', 987654321098762, 'ytrisnadkjs', 'cucu', 'Pijarcan');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `pengguna`
 --
 
@@ -697,88 +731,91 @@ CREATE TABLE `pengguna` (
   `nama_lengkap` varchar(100) DEFAULT NULL,
   `NIK` bigint(20) NOT NULL,
   `role` int(11) NOT NULL,
-  `kabupaten` varchar(25) DEFAULT NULL,
+  `kabupaten` varchar(25) DEFAULT 'Badung',
   `kode_kecamatan` int(11) DEFAULT NULL,
   `kode_desa` bigint(20) DEFAULT NULL,
   `kode_dusun` bigint(20) DEFAULT NULL,
-  `status` tinyint(1) DEFAULT NULL,
-  `password` varchar(100) DEFAULT NULL
+  `status` tinyint(1) DEFAULT 0,
+  `password` varchar(100) DEFAULT NULL,
+  `Email` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `pengguna`
 --
 
-INSERT INTO `pengguna` (`username`, `nama_lengkap`, `NIK`, `role`, `kabupaten`, `kode_kecamatan`, `kode_desa`, `kode_dusun`, `status`, `password`) VALUES
-('5103040004', 'Penanggung Jawab Desa Tumbak Bayuh', 5171013421050001, 3, 'Badung', 5103040, 5103040004, NULL, 1, 'pjdumbakBayuh'),
-('5103040005', 'Penanggung Jawab Desa Buduk', 5171013421050002, 3, 'Badung', 5103040, 5103040005, NULL, 1, 'pjbuduk'),
-('5103040006', 'Penanggung Jawab Kelurahan Abianbase', 5171013421050003, 3, 'Badung', 5103040, 5103040006, NULL, 1, 'pjabianbase'),
-('5103040007', 'Penanggung Jawab Kelurahan Sempidi', 5171013421050004, 3, 'Badung', 5103040, 5103040007, NULL, 1, 'pjsempidi'),
-('5103040008', 'Penanggung Jawab Kelurahan Sading', 5171013421050005, 3, 'Badung', 5103040, 5103040008, NULL, 1, 'pjsading'),
-('5103040009', 'Penanggung Jawab Kelurahan Lukluk', 5171013421050006, 3, 'Badung', 5103040, 5103040009, NULL, 1, 'pjlukluk'),
-('5103040010', 'Penanggung Jawab Kelurahan Kapal', 5171013421050007, 3, 'Badung', 5103040, 5103040010, NULL, 1, 'pjkapal'),
-('5103040011', 'Penanggung Jawab Desa Kekeran', 5171013421050008, 3, 'Badung', 5103040, 5103040011, NULL, 1, 'pjkekeran'),
-('5103040012', 'Penanggung Jawab Desa Mengwi Tani', 5171014421060001, 3, 'Badung', 5103040, 5103040012, NULL, 1, 'pjdengwiTtani'),
-('5103040013', 'Penanggung Jawab Desa Mengwi', 5171014421060002, 3, 'Badung', 5103040, 5103040013, NULL, 1, 'pjmengwi'),
-('5103040014', 'Penanggung Jawab Desa Gulingan', 5171014421060003, 3, 'Badung', 5103040, 5103040014, NULL, 1, 'pjgulingan'),
-('5103040015', 'Penanggung Jawab Desa Penarungan', 5171014421060004, 3, 'Badung', 5103040, 5103040015, NULL, 1, 'pjpenarungan'),
-('5103040016', 'Penanggung Jawab Desa Baha', 5171014421060005, 3, 'Badung', 5103040, 5103040016, NULL, 1, 'pjbaha'),
-('5103040017', 'Penanggung Jawab Desa Werdibhuana', 5171014421060006, 3, 'Badung', 5103040, 5103040017, NULL, 1, 'pjwerdibhuana'),
-('5103040018', 'Penanggung Jawab Desa Sobangan', 5171014421060007, 3, 'Badung', 5103040, 5103040018, NULL, 1, 'pjsobangan'),
-('5103040019', 'Penanggung Jawab Desa Sembung', 5171014421060008, 3, 'Badung', 5103040, 5103040019, NULL, 1, 'pjsembung'),
-('5103050014', 'Penanggung Jawab Desa Bongkasa', 5171014431090001, 3, 'Badung', 5103050, 5103050014, NULL, 1, 'pjbongkasa'),
-('5103050015', 'Penanggung Jawab Desa Taman', 5171014431090002, 3, 'Badung', 5103050, 5103050015, NULL, 1, 'pjtaman'),
-('5103050016', 'Penanggung Jawab Desa Selat', 5171014431090003, 3, 'Badung', 5103050, 5103050016, NULL, 1, 'pjselat'),
-('5103050017', 'Penanggung Jawab Desa Sangeh', 5171014431090004, 3, 'Badung', 5103050, 5103050017, NULL, 1, 'pjsangeh'),
-('5103050018', 'Penanggung Jawab Desa Bongkasa Pertiwi', 5171014431090005, 3, 'Badung', 5103050, 5103050018, NULL, 1, 'pjdongkasapertiwi'),
-('5103060', 'Penanggung Jawab Petang', 5171014431090006, 2, 'Badung', 5103060, NULL, NULL, 1, 'petang3060'),
-('5103060001', 'Penanggung Jawab Desa Carangsari', 5171014431090007, 3, 'Badung', 5103060, 5103060001, NULL, 1, 'pjcarangsari'),
-('5103020001', 'Penanggung Jawab Kelurahan Kedonganan', 5171015521030001, 3, 'Badung', 5103020, 5103020001, NULL, 1, 'pjkedonganan'),
-('5103020002', 'Penanggung Jawab Kelurahan Tuban', 5171015521030002, 3, 'Badung', 5103020, 5103020002, NULL, 1, 'pjtuban'),
-('5103020003', 'Penanggung Jawab Kelurahan Kuta', 5171015521030003, 3, 'Badung', 5103020, 5103020003, NULL, 1, 'pjkuta'),
-('5103020004', 'Penanggung Jawab Kelurahan Legian', 5171015521030004, 3, 'Badung', 5103020, 5103020004, NULL, 1, 'pjlegian'),
-('5103020005', 'Penanggung Jawab Kelurahan Seminyak', 5171015521030005, 3, 'Badung', 5103020, 5103020005, NULL, 1, 'pjseminyak'),
-('5103030', 'Penanggung Jawab Kuta Utara', 5171015521030006, 2, 'Badung', 5103030, NULL, NULL, 1, 'kutur3030'),
-('5103030001', 'Penanggung Jawab Kelurahan Kerobokan Kelod', 5171015521030007, 3, 'Badung', 5103030, 5103030001, NULL, 1, 'pjkerkelod'),
-('5103030002', 'Penanggung Jawab Kelurahan Kerobokan', 5171015521030008, 3, 'Badung', 5103030, 5103030002, NULL, 1, 'pjkerobokan'),
-('5103030003', 'Penanggung Jawab Kelurahan Kerobokan Kaja', 5171016521040001, 3, 'Badung', 5103030, 5103030003, NULL, 1, 'pjkerkaja'),
-('5103030004', 'Penanggung Jawab Desa Tibubeneng', 5171016521040002, 3, 'Badung', 5103030, 5103030004, NULL, 1, 'pjtibubeneng'),
-('5103030005', 'Penanggung Jawab Desa Canggu', 5171016521040003, 3, 'Badung', 5103030, 5103030005, NULL, 1, 'pjcanggu'),
-('5103030006', 'Penanggung Jawab Desa Dalung', 5171016521040004, 3, 'Badung', 5103030, 5103030006, NULL, 1, 'pjdalung'),
-('5103040', 'Penanggung Jawab Mengwi', 5171016521040005, 2, 'Badung', 5103040, NULL, NULL, 1, 'mengwi3040'),
-('5103040001', 'Penanggung Jawab Desa Cemagi', 5171016521040006, 3, 'Badung', 5103040, 5103040001, NULL, 1, 'pjcemagi'),
-('5103040002', 'Penanggung Jawab Desa Munggu', 5171016521040007, 3, 'Badung', 5103040, 5103040002, NULL, 1, 'pjmunggu'),
-('5103040003', 'Penanggung Jawab Desa Pererenan', 5171016521040008, 3, 'Badung', 5103040, 5103040003, NULL, 1, 'pjpererenan'),
-('5103010', 'Penanggung Jawab Kuta Selatan', 5171016612210001, 2, 'Badung', 5103010, NULL, NULL, 1, 'kutsel3010'),
-('dukcapilbd', 'Dinas Kependudukan dan Pencatatan Sipil', 5171016612210002, 1, 'Badung', NULL, NULL, NULL, 1, 'catatansipil'),
-('5103010001', 'Penanggung Jawab Desa Pecatu', 5171016612210003, 3, 'Badung', 5103010, 5103010001, NULL, 1, 'pjpecatu'),
-('5103010002', 'Penanggung Jawab Desa Unggasan', 5171016612210004, 3, 'Badung', 5103010, 5103010002, NULL, 1, 'pjunggasan'),
-('5103010003', 'Penanggung Jawab Desa Kutuh', 5171016612210005, 3, 'Badung', 5103010, 5103010003, NULL, 1, 'pjkutuh'),
-('5103010004', 'Penanggung Jawab Desa Benoa', 5171016612210006, 3, 'Badung', 5103010, 5103010004, NULL, 1, 'pjbenoa'),
-('5103010005', 'Penanggung Jawab Desa Tanjung Benoa', 5171016612210007, 3, 'Badung', 5103010, 5103010005, NULL, 1, 'pjtjbenoa'),
-('5103010006', 'Penanggung Jawab Desa Jimbaran', 5171016612210008, 3, 'Badung', 5103010, 5103010006, NULL, 1, 'pjjimbaran'),
-('5103020', 'Penanggung Jawab Kuta', 5171016612210009, 2, 'Badung', 5103020, NULL, NULL, 1, 'kuta3020'),
-('5103050006', 'Penanggung Jawab Desa Sibang Kaja', 5171017431080001, 3, 'Badung', 5103050, 5103050006, NULL, 1, 'pjdibangKkaja'),
-('5103050007', 'Penanggung Jawab Desa Mekar Bhuana', 5171017431080002, 3, 'Badung', 5103050, 5103050007, NULL, 1, 'pjdekarBhbhuana'),
-('5103050008', 'Penanggung Jawab Desa Mambal', 5171017431080003, 3, 'Badung', 5103050, 5103050008, NULL, 1, 'pjmambal'),
-('5103050009', 'Penanggung Jawab Desa Abiansemal', 5171017431080004, 3, 'Badung', 5103050, 5103050009, NULL, 1, 'pjabiansemal'),
-('5103050010', 'Penanggung Jawab Desa Dauh Yeh Cani', 5171017431080005, 3, 'Badung', 5103050, 5103050010, NULL, 1, 'pjddehcani'),
-('5103050011', 'Penanggung Jawab Desa Ayunan', 5171017431080006, 3, 'Badung', 5103050, 5103050011, NULL, 1, 'pjayunan'),
-('5103050012', 'Penanggung Jawab Desa Blakiuh', 5171017431080007, 3, 'Badung', 5103050, 5103050012, NULL, 1, 'pjblahkiuh'),
-('5103050013', 'Penanggung Jawab Desa Punggul', 5171017431080008, 3, 'Badung', 5103050, 5103050013, NULL, 1, 'pjpunggul'),
-('5103040020', 'Penanggung Jawab Desa Kuwum', 5171017621080001, 3, 'Badung', 5103040, 5103040020, NULL, 1, 'pjkuwum'),
-('5103050', 'Penanggung Jawab Abiansemal', 5171017621080002, 2, 'Badung', 5103050, NULL, NULL, 1, 'abiansemal3050'),
-('5103050001', 'Penanggung Jawab Desa Darmasaba', 5171017621080003, 3, 'Badung', 5103050, 5103050001, NULL, 1, 'pjdarmasaba'),
-('5103050002', 'Penanggung Jawab Desa Sibang Gede', 5171017621080004, 3, 'Badung', 5103050, 5103050002, NULL, 1, 'pjdibangGgede'),
-('5103050003', 'Penanggung Jawab Desa Jagapati', 5171017621080005, 3, 'Badung', 5103050, 5103050003, NULL, 1, 'pjjagapati'),
-('5103050004', 'Penanggung Jawab Desa Angantaka', 5171017621080006, 3, 'Badung', 5103050, 5103050004, NULL, 1, 'pjangantaka'),
-('5103050005', 'Penanggung Jawab Desa Sedang', 5171017621080007, 3, 'Badung', 5103050, 51030500015, NULL, 1, 'pjsedang'),
-('5103060002', 'Penanggung Jawab Desa Getasan', 5171018831090001, 3, 'Badung', 5103060, 5103060002, NULL, 1, 'pjgetasan'),
-('5103060003', 'Penanggung Jawab Desa Pangsan', 5171018831090002, 3, 'Badung', 5103060, 5103060003, NULL, 1, 'pjpangsan'),
-('5103060004', 'Penanggung Jawab Desa Petang', 5171018831090003, 3, 'Badung', 5103060, 5103060004, NULL, 1, 'pjpetang'),
-('5103060005', 'Penanggung Jawab Desa Sulangai', 5171018831090004, 3, 'Badung', 5103060, 5103060005, NULL, 1, 'pjsulangai'),
-('5103060006', 'Penanggung Jawab Desa Pelaga', 5171018831090005, 3, 'Badung', 5103060, 5103060006, NULL, 1, 'pjpelaga'),
-('5103060007', 'Penanggung Jawab Desa Beok/Sidan', 5171018831090006, 3, 'Badung', 5103060, 5103060007, NULL, 1, 'pjbeloksidan');
+INSERT INTO `pengguna` (`username`, `nama_lengkap`, `NIK`, `role`, `kabupaten`, `kode_kecamatan`, `kode_desa`, `kode_dusun`, `status`, `password`, `Email`) VALUES
+('1234256781293012', 'ayu tri', 1234256781293012, 4, 'Badung', 5103050, 5103050009, 51030500090004, 0, '12', 'pulaudewata17@gmail.com'),
+('1234567890123456', 'Pijarcan', 1234567890123456, 4, 'Badung', 5103020, 5103020003, 51030200030002, 0, '11', 'pijarcandra22@gmail.com'),
+('5103040004', 'Penanggung Jawab Desa Tumbak Bayuh', 5171013421050001, 3, 'Badung', 5103040, 5103040004, NULL, 1, 'pjdumbakBayuh', NULL),
+('5103040005', 'Penanggung Jawab Desa Buduk', 5171013421050002, 3, 'Badung', 5103040, 5103040005, NULL, 1, 'pjbuduk', NULL),
+('5103040006', 'Penanggung Jawab Kelurahan Abianbase', 5171013421050003, 3, 'Badung', 5103040, 5103040006, NULL, 1, 'pjabianbase', NULL),
+('5103040007', 'Penanggung Jawab Kelurahan Sempidi', 5171013421050004, 3, 'Badung', 5103040, 5103040007, NULL, 1, 'pjsempidi', NULL),
+('5103040008', 'Penanggung Jawab Kelurahan Sading', 5171013421050005, 3, 'Badung', 5103040, 5103040008, NULL, 1, 'pjsading', NULL),
+('5103040009', 'Penanggung Jawab Kelurahan Lukluk', 5171013421050006, 3, 'Badung', 5103040, 5103040009, NULL, 1, 'pjlukluk', NULL),
+('5103040010', 'Penanggung Jawab Kelurahan Kapal', 5171013421050007, 3, 'Badung', 5103040, 5103040010, NULL, 1, 'pjkapal', NULL),
+('5103040011', 'Penanggung Jawab Desa Kekeran', 5171013421050008, 3, 'Badung', 5103040, 5103040011, NULL, 1, 'pjkekeran', NULL),
+('5103040012', 'Penanggung Jawab Desa Mengwi Tani', 5171014421060001, 3, 'Badung', 5103040, 5103040012, NULL, 1, 'pjdengwiTtani', NULL),
+('5103040013', 'Penanggung Jawab Desa Mengwi', 5171014421060002, 3, 'Badung', 5103040, 5103040013, NULL, 1, 'pjmengwi', NULL),
+('5103040014', 'Penanggung Jawab Desa Gulingan', 5171014421060003, 3, 'Badung', 5103040, 5103040014, NULL, 1, 'pjgulingan', NULL),
+('5103040015', 'Penanggung Jawab Desa Penarungan', 5171014421060004, 3, 'Badung', 5103040, 5103040015, NULL, 1, 'pjpenarungan', NULL),
+('5103040016', 'Penanggung Jawab Desa Baha', 5171014421060005, 3, 'Badung', 5103040, 5103040016, NULL, 1, 'pjbaha', NULL),
+('5103040017', 'Penanggung Jawab Desa Werdibhuana', 5171014421060006, 3, 'Badung', 5103040, 5103040017, NULL, 1, 'pjwerdibhuana', NULL),
+('5103040018', 'Penanggung Jawab Desa Sobangan', 5171014421060007, 3, 'Badung', 5103040, 5103040018, NULL, 1, 'pjsobangan', NULL),
+('5103040019', 'Penanggung Jawab Desa Sembung', 5171014421060008, 3, 'Badung', 5103040, 5103040019, NULL, 1, 'pjsembung', NULL),
+('5103050014', 'Penanggung Jawab Desa Bongkasa', 5171014431090001, 3, 'Badung', 5103050, 5103050014, NULL, 1, 'pjbongkasa', NULL),
+('5103050015', 'Penanggung Jawab Desa Taman', 5171014431090002, 3, 'Badung', 5103050, 5103050015, NULL, 1, 'pjtaman', NULL),
+('5103050016', 'Penanggung Jawab Desa Selat', 5171014431090003, 3, 'Badung', 5103050, 5103050016, NULL, 1, 'pjselat', NULL),
+('5103050017', 'Penanggung Jawab Desa Sangeh', 5171014431090004, 3, 'Badung', 5103050, 5103050017, NULL, 1, 'pjsangeh', NULL),
+('5103050018', 'Penanggung Jawab Desa Bongkasa Pertiwi', 5171014431090005, 3, 'Badung', 5103050, 5103050018, NULL, 1, 'pjdongkasapertiwi', NULL),
+('5103060', 'Penanggung Jawab Petang', 5171014431090006, 2, 'Badung', 5103060, NULL, NULL, 1, 'petang3060', NULL),
+('5103060001', 'Penanggung Jawab Desa Carangsari', 5171014431090007, 3, 'Badung', 5103060, 5103060001, NULL, 1, 'pjcarangsari', NULL),
+('5103020001', 'Penanggung Jawab Kelurahan Kedonganan', 5171015521030001, 3, 'Badung', 5103020, 5103020001, NULL, 1, 'pjkedonganan', NULL),
+('5103020002', 'Penanggung Jawab Kelurahan Tuban', 5171015521030002, 3, 'Badung', 5103020, 5103020002, NULL, 1, 'pjtuban', NULL),
+('5103020003', 'Penanggung Jawab Kelurahan Kuta', 5171015521030003, 3, 'Badung', 5103020, 5103020003, NULL, 1, 'pjkuta', NULL),
+('5103020004', 'Penanggung Jawab Kelurahan Legian', 5171015521030004, 3, 'Badung', 5103020, 5103020004, NULL, 1, 'pjlegian', NULL),
+('5103020005', 'Penanggung Jawab Kelurahan Seminyak', 5171015521030005, 3, 'Badung', 5103020, 5103020005, NULL, 1, 'pjseminyak', NULL),
+('5103030', 'Penanggung Jawab Kuta Utara', 5171015521030006, 2, 'Badung', 5103030, NULL, NULL, 1, 'kutur3030', NULL),
+('5103030001', 'Penanggung Jawab Kelurahan Kerobokan Kelod', 5171015521030007, 3, 'Badung', 5103030, 5103030001, NULL, 1, 'pjkerkelod', NULL),
+('5103030002', 'Penanggung Jawab Kelurahan Kerobokan', 5171015521030008, 3, 'Badung', 5103030, 5103030002, NULL, 1, 'pjkerobokan', NULL),
+('5103030003', 'Penanggung Jawab Kelurahan Kerobokan Kaja', 5171016521040001, 3, 'Badung', 5103030, 5103030003, NULL, 1, 'pjkerkaja', NULL),
+('5103030004', 'Penanggung Jawab Desa Tibubeneng', 5171016521040002, 3, 'Badung', 5103030, 5103030004, NULL, 1, 'pjtibubeneng', NULL),
+('5103030005', 'Penanggung Jawab Desa Canggu', 5171016521040003, 3, 'Badung', 5103030, 5103030005, NULL, 1, 'pjcanggu', NULL),
+('5103030006', 'Penanggung Jawab Desa Dalung', 5171016521040004, 3, 'Badung', 5103030, 5103030006, NULL, 1, 'pjdalung', NULL),
+('5103040', 'Penanggung Jawab Mengwi', 5171016521040005, 2, 'Badung', 5103040, NULL, NULL, 1, 'mengwi3040', NULL),
+('5103040001', 'Penanggung Jawab Desa Cemagi', 5171016521040006, 3, 'Badung', 5103040, 5103040001, NULL, 1, 'pjcemagi', NULL),
+('5103040002', 'Penanggung Jawab Desa Munggu', 5171016521040007, 3, 'Badung', 5103040, 5103040002, NULL, 1, 'pjmunggu', NULL),
+('5103040003', 'Penanggung Jawab Desa Pererenan', 5171016521040008, 3, 'Badung', 5103040, 5103040003, NULL, 1, 'pjpererenan', NULL),
+('5103010', 'Penanggung Jawab Kuta Selatan', 5171016612210001, 2, 'Badung', 5103010, NULL, NULL, 1, 'kutsel3010', NULL),
+('dukcapilbd', 'Dinas Kependudukan dan Pencatatan Sipil', 5171016612210002, 1, 'Badung', NULL, NULL, NULL, 1, 'catatansipil', NULL),
+('5103010001', 'Penanggung Jawab Desa Pecatu', 5171016612210003, 3, 'Badung', 5103010, 5103010001, NULL, 1, 'pjpecatu', NULL),
+('5103010002', 'Penanggung Jawab Desa Unggasan', 5171016612210004, 3, 'Badung', 5103010, 5103010002, NULL, 1, 'pjunggasan', NULL),
+('5103010003', 'Penanggung Jawab Desa Kutuh', 5171016612210005, 3, 'Badung', 5103010, 5103010003, NULL, 1, 'pjkutuh', NULL),
+('5103010004', 'Penanggung Jawab Desa Benoa', 5171016612210006, 3, 'Badung', 5103010, 5103010004, NULL, 1, 'pjbenoa', NULL),
+('5103010005', 'Penanggung Jawab Desa Tanjung Benoa', 5171016612210007, 3, 'Badung', 5103010, 5103010005, NULL, 1, 'pjtjbenoa', NULL),
+('5103010006', 'Penanggung Jawab Desa Jimbaran', 5171016612210008, 3, 'Badung', 5103010, 5103010006, NULL, 1, 'pjjimbaran', NULL),
+('5103020', 'Penanggung Jawab Kuta', 5171016612210009, 2, 'Badung', 5103020, NULL, NULL, 1, 'kuta3020', NULL),
+('5103050006', 'Penanggung Jawab Desa Sibang Kaja', 5171017431080001, 3, 'Badung', 5103050, 5103050006, NULL, 1, 'pjdibangKkaja', NULL),
+('5103050007', 'Penanggung Jawab Desa Mekar Bhuana', 5171017431080002, 3, 'Badung', 5103050, 5103050007, NULL, 1, 'pjdekarBhbhuana', NULL),
+('5103050008', 'Penanggung Jawab Desa Mambal', 5171017431080003, 3, 'Badung', 5103050, 5103050008, NULL, 1, 'pjmambal', NULL),
+('5103050009', 'Penanggung Jawab Desa Abiansemal', 5171017431080004, 3, 'Badung', 5103050, 5103050009, NULL, 1, 'pjabiansemal', NULL),
+('5103050010', 'Penanggung Jawab Desa Dauh Yeh Cani', 5171017431080005, 3, 'Badung', 5103050, 5103050010, NULL, 1, 'pjddehcani', NULL),
+('5103050011', 'Penanggung Jawab Desa Ayunan', 5171017431080006, 3, 'Badung', 5103050, 5103050011, NULL, 1, 'pjayunan', NULL),
+('5103050012', 'Penanggung Jawab Desa Blakiuh', 5171017431080007, 3, 'Badung', 5103050, 5103050012, NULL, 1, 'pjblahkiuh', NULL),
+('5103050013', 'Penanggung Jawab Desa Punggul', 5171017431080008, 3, 'Badung', 5103050, 5103050013, NULL, 1, 'pjpunggul', NULL),
+('5103040020', 'Penanggung Jawab Desa Kuwum', 5171017621080001, 3, 'Badung', 5103040, 5103040020, NULL, 1, 'pjkuwum', NULL),
+('5103050', 'Penanggung Jawab Abiansemal', 5171017621080002, 2, 'Badung', 5103050, NULL, NULL, 1, 'abiansemal3050', NULL),
+('5103050001', 'Penanggung Jawab Desa Darmasaba', 5171017621080003, 3, 'Badung', 5103050, 5103050001, NULL, 1, 'pjdarmasaba', NULL),
+('5103050002', 'Penanggung Jawab Desa Sibang Gede', 5171017621080004, 3, 'Badung', 5103050, 5103050002, NULL, 1, 'pjdibangGgede', NULL),
+('5103050003', 'Penanggung Jawab Desa Jagapati', 5171017621080005, 3, 'Badung', 5103050, 5103050003, NULL, 1, 'pjjagapati', NULL),
+('5103050004', 'Penanggung Jawab Desa Angantaka', 5171017621080006, 3, 'Badung', 5103050, 5103050004, NULL, 1, 'pjangantaka', NULL),
+('5103050005', 'Penanggung Jawab Desa Sedang', 5171017621080007, 3, 'Badung', 5103050, 51030500015, NULL, 1, 'pjsedang', NULL),
+('5103060002', 'Penanggung Jawab Desa Getasan', 5171018831090001, 3, 'Badung', 5103060, 5103060002, NULL, 1, 'pjgetasan', NULL),
+('5103060003', 'Penanggung Jawab Desa Pangsan', 5171018831090002, 3, 'Badung', 5103060, 5103060003, NULL, 1, 'pjpangsan', NULL),
+('5103060004', 'Penanggung Jawab Desa Petang', 5171018831090003, 3, 'Badung', 5103060, 5103060004, NULL, 1, 'pjpetang', NULL),
+('5103060005', 'Penanggung Jawab Desa Sulangai', 5171018831090004, 3, 'Badung', 5103060, 5103060005, NULL, 1, 'pjsulangai', NULL),
+('5103060006', 'Penanggung Jawab Desa Pelaga', 5171018831090005, 3, 'Badung', 5103060, 5103060006, NULL, 1, 'pjpelaga', NULL),
+('5103060007', 'Penanggung Jawab Desa Beok/Sidan', 5171018831090006, 3, 'Badung', 5103060, 5103060007, NULL, 1, 'pjbeloksidan', NULL);
 
 -- --------------------------------------------------------
 
@@ -824,6 +861,12 @@ ALTER TABLE `kecamatan`
   ADD PRIMARY KEY (`kode_kecamatan`);
 
 --
+-- Indexes for table `laporan`
+--
+ALTER TABLE `laporan`
+  ADD PRIMARY KEY (`id_laporan`);
+
+--
 -- Indexes for table `pengguna`
 --
 ALTER TABLE `pengguna`
@@ -835,6 +878,16 @@ ALTER TABLE `pengguna`
 --
 ALTER TABLE `role`
   ADD PRIMARY KEY (`id_role`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `laporan`
+--
+ALTER TABLE `laporan`
+  MODIFY `id_laporan` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
