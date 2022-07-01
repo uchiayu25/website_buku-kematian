@@ -4,18 +4,21 @@
 <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pelaporan Buku Pokok Pemakaman(Dusun)</title>
+    <title>Edit Pengguna</title>
     <link rel="icon" href="image\Badung.png" type="image/icon type">
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="style2.css">
-    <link rel="stylesheet" type="text/css" href="style3.css">
+    <link rel="stylesheet" type="text/css" href="style4.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Datepicker -->
+    <script src='bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js' type='text/javascript'></script>
+
+
 </head>
 
 <body>
     <header id="header" class="fixed-top"> 
-        <!-- NAVIGATION BAR -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#">
                 <img src="image\Badung.png" width="40" height="40" class="d-inline-block align-middle" alt="">
@@ -24,13 +27,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Beranda</a>
+                    <a class="nav-link" href="Dusun_Page.php">Beranda</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Laporan</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Daftar Pengguna <span class="sr-only">(current)</span> </a>
+                    <a class="nav-link" href="#">Formulir<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="Login.php">Log Out</a>
@@ -42,63 +45,107 @@
             </button>
         </nav>
     </header>
-    
-    <div class="wrapper mt-15">
-        <div class="logo">
-            <img src="image\edit_pengguna.png" alt="">
+
+    <!-- Formulir -->
+    <section class="formulir" style="margin-top: 7em;">
+        <form class="container">
+            <div class="logo atas text-center">
+                <img src="image\datadiri.png" class= "mt-lg-5 " alt="">
+            </div>
+            <div class="form-row mt-lg-5">
+                <div class="form-group col-md-4">
+                    <label for="dusun">Dusun</label>
+                    <input type="text" class="form-control" id="inputdusun" placeholder="Dusun">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="kelurahan">Kelurahan/Desa</label>
+                    <input type="text" class="form-control" id="inputkeldes" placeholder="Kelurahan/Desa">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="kecamatan">Kecamatan</label>
+                    <input type="text" class="form-control" id="inputkecamatan" placeholder="Kecamatan">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputNIK">NIK</label>
+                <input type="text" class="form-control" id="inputNIK" placeholder="NIK">
+            </div>
+            <div class="form-group">
+                <label for="inputNama">Nama Lengkap</label>
+                <input type="text" class="form-control" id="inputNamaLengkap" placeholder="Nama Lengkap">
+            </div>
+            <div class="form-group">
+                <label for="inputEmail">Email</label>
+                <input type="text" class="form-control" id="inputemail" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <label for="inputNIKPassword">Password</label>
+                <input type="text" class="form-control" id="inputPassword" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <div class="form-check form-switch">
+                    <input class='input-switch' type="checkbox" id="demo"/>
+                    <label class="label-switch" for="demo"></label>
+                    <span class="info-text justify-content-center" for="input-switch"></span>
+                </div>
+            </div>
+            <div class="mt-lg-5 text-right">
+                <button type="submit" class="btn btn-primary rounded-pill">Perbarui</button>
+                <button type="submit" class="btn btn-danger rounded-pill">Batal</button>
+            </div>
+        </form>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-top mt-lg-5">
+            <div class="container_footer">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 footer-contact mt-3">
+                        <h4>Dinas Kependudukan Dan Pencatatan Sipil<span></span></h4>
+                        <p>
+                            Pusat Pemerintahan Mangupraja Mandala,<br> 
+                            Jl. Raya Sempidi Mengwi, <br> 
+                            Badung-Bali <br><br>
+                            <strong>Telepon:</strong> (0361) 894980<br>
+                            <strong>Email:</strong> disdukcapil@badungkab.go.id<br>
+                        </p>
+                    </div>
+
+                    <!-- <div class="col-lg-4 col-md-12 footer-links mt-3">
+                        <h5>Menu Tersedia</h5>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Beranda</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Laporan</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Formulir</a></li>
+                        </ul>
+                    </div> -->
+
+                    <div class="col-lg-6 col-md-12 footer-links mt-3">
+                        <h5>Media Sosial Kami</h5>
+                        <p>Temukan kami dalam beberapa media sosial berikut ini.</p>
+                        <div class="social-links mt-3">
+                            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- <div class="text-center mt-2 name">
-           Pelaporan Buku Pokok Pemakaman
-        </div> -->
-        <form class="p-3 mt-3" id="edit_form" name=edit_form method="post">
-        <input type=hidden name=st value=0>
-            <div class="input-group mb-3">
-                <select class="form-select form-field" aria-label="Default select example" name=kecamatan id='s1'>
-                    <option value=''>--Kecamatan--</option>
-                    <?Php
-                        require "config.php";// connection to database 
-                        $sql="SELECT * FROM `kecamatan`";
-                        foreach ($dbo->query($sql) as $row) {
-                        echo "<option value=$row[kode_kecamatan]>$row[nama_kecamatan]</option>";
-                        }
-                    ?>
-                </select>
-                <select class="form-select form-field" name=desa aria-label="Default select example" id="s2">
-                    <option value=''>--Desa/Kel--</option>
-                </select>
-                <select class="form-select form-field" name=dusun aria-label="Default select example" id="s3">
-                    <option value='title'>--Dusun--</option>
-                </select>
-            </div>
-            <!-- <div class="form-field align-items-center" id="opsionalDusun">
-                <span class="far fa-user"></span>
-                <input type="text" name="nama_dusun_baru" id="nama_dusun_baru" placeholder="Nama Dusun">
-            </div> -->
-            <div class="form-field d-flex align-items-center">
-                <span class="far fa-user"></span>
-                <input type="text" name="NIK" id="NIK" placeholder="NIK">
-            </div>
-            <div class="field d-flex align-items-center">
-                <span class="far fa-user"></span>
-                <input type="text" name="username" id="username" placeholder="Username" disabled="disabled">
-            </div>
-            <div class="form-field d-flex align-items-center">
-                <span class="far fa-user"></span>
-                <input type="text" name="nama_lengkap" id="nama_lengkap" placeholder="Nama Lengkap">
-            </div>
-            <div class="form-field d-flex align-items-center">
-                <span class="fas fa-key"></span>
-                <input type="password" name="password" id="password" placeholder="Password">
-            </div>
-            <div class="form-check form-switch">
-                <input class='input-switch' type="checkbox" id="demo"/>
-                <label class="label-switch" for="demo"></label>
-                <span class="info-text" for="input-switch"></span>
-            </div>
-            <div style="text-align:center">
-                <button class="btn btn-danger rounded-pill mt-3" style="width:150px" name= "cancel" value="cancel" id="cancel">Batal</button>
-                <button class="btn btn-primary rounded-pill mt-3"  style="width:150px" name= "update" value="update" id="update" >Perbarui</button>
-            </div>
-    </div>
+    </footer>
+    
+        <script type="text/javascript">
+            $(function(){
+                $('#datepicker').datepicker();
+            });
+        </script>
 </body>
+
+
+
 </html>
